@@ -1,0 +1,17 @@
+{
+    "name": "harold/yai",
+    "description": "Api para cualquier base de datos",
+    "type": "database",
+    "require": {
+        "illuminate/database": "^8.0@dev",
+        "symfony/http-foundation": "^5.1@dev"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "harold maussa",
+            "email": "haroldmaussa@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
