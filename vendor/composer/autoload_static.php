@@ -141,7 +141,7 @@ class ComposerStaticInit5cc9cad6bd316a786ffa3f94acc0f5f8
         ),
         'Console\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
+            0 => __DIR__ . '/../..' . '/comandos',
         ),
         'Carbon\\' => 
         array (
@@ -191,7 +191,7 @@ class ComposerStaticInit5cc9cad6bd316a786ffa3f94acc0f5f8
         'Carbon\\Traits\\Units' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Units.php',
         'Carbon\\Traits\\Week' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Week.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
-        'Console\\App\\Commands\\HelloworldCommand' => __DIR__ . '/../..' . '/src/App/Commands/HelloworldCommand.php',
+        'Console\\App\\Commands\\CrearModelo' => __DIR__ . '/../..' . '/comandos/App/Commands/CrearModelo.php',
         'Doctrine\\Common\\Inflector\\Inflector' => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector/Inflector.php',
         'Illuminate\\Container\\BoundMethod' => __DIR__ . '/..' . '/illuminate/container/BoundMethod.php',
         'Illuminate\\Container\\Container' => __DIR__ . '/..' . '/illuminate/container/Container.php',

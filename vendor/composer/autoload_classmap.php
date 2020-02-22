@@ -43,7 +43,7 @@ return array(
     'Carbon\\Traits\\Units' => $vendorDir . '/nesbot/carbon/src/Carbon/Traits/Units.php',
     'Carbon\\Traits\\Week' => $vendorDir . '/nesbot/carbon/src/Carbon/Traits/Week.php',
     'Carbon\\Translator' => $vendorDir . '/nesbot/carbon/src/Carbon/Translator.php',
-    'Console\\App\\Commands\\HelloworldCommand' => $baseDir . '/src/App/Commands/HelloworldCommand.php',
+    'Console\\App\\Commands\\CrearModelo' => $baseDir . '/comandos/App/Commands/CrearModelo.php',
     'Doctrine\\Common\\Inflector\\Inflector' => $vendorDir . '/doctrine/inflector/lib/Doctrine/Common/Inflector/Inflector.php',
     'Illuminate\\Container\\BoundMethod' => $vendorDir . '/illuminate/container/BoundMethod.php',
     'Illuminate\\Container\\Container' => $vendorDir . '/illuminate/container/Container.php',
