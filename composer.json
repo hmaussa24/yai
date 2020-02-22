@@ -4,12 +4,15 @@
     "type": "database",
     "require": {
         "illuminate/database": "^8.0@dev",
-        "symfony/http-foundation": "^5.1@dev"
+        "symfony/http-foundation": "^5.1@dev",
+        "symfony/console": "^5.1@dev"
     },
     "autoload": {
         "psr-4": {
-            "App\\":"app/"
-        }
+            "App\\":"app/",
+            "Console\\": "src"
+        },
+        "classmap": ["src"]
     },
     "license": "MIT",
     "authors": [

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e5bccc221a7c3d842c77104c70cf3903",
+    "content-hash": "f205e47e45c486af21db9bd4e876710c",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -1190,7 +1190,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "illuminate/database": 20,
-        "symfony/http-foundation": 20
+        "symfony/http-foundation": 20,
+        "symfony/console": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
