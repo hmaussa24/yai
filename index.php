@@ -1,3 +1,3 @@
 <?php
-echo "hola";
+echo $_GET['url'];
 ?>
