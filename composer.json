@@ -6,6 +6,11 @@
         "illuminate/database": "^8.0@dev",
         "symfony/http-foundation": "^5.1@dev"
     },
+    "autoload": {
+        "psr-4": {
+            "App\\":"app/"
+        }
+    },
     "license": "MIT",
     "authors": [
         {
