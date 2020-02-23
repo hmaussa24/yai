@@ -33,17 +33,21 @@ $texto = <<<_END
  if(fwrite($fh, $texto)){
     $output->writeln('Se creo el modelo ' . $input->getArgument('name').' en app/modelo');
     $output->writeln('Creando el controlador ' . $input->getArgument('name'));
-    $controlador = 'app/Controller/'.$input->getArgument('name').'.php';
+    $controlador = 'app/Class/'.$input->getArgument('name').'.php';
     $controllername = $input->getArgument('name');
     $fh = fopen($controlador, 'w');
     $texto = <<<"EOT"
              <?php
-             require '../../vendor/autoload.php';
-             require '../Database/DataBase.php';
+             require 'vendor/autoload.php';
+             require 'app/Database/DataBase.php';
               use Illuminate\Support\Facades\DB;
               use App\modelo\\$namemoel;
-              \$users = User::get();
-              echo json_encode(\$users, JSON_FORCE_OBJECT);
+              class Api{
+                public function Api(){            
+                    \$datos = $namemoel::get();
+                    return json_encode(array('datos' => \$datos), JSON_PRETTY_PRINT);
+                }            
+             }
              EOT;
     if(fwrite($fh, $texto)){
         $output->writeln('Se creo el controlador ' . $input->getArgument('name').' en app/Controller');
