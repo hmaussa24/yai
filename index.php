@@ -25,6 +25,20 @@ if(isset($_GET['url'])){
         }
         header("Content-Type: application/json");
         echo  $dato->ApiParametro($parametros[0]["parametro"],$parametros[0]["valor"]);
+    }elseif(count($_GET) > 2){
+        $dato = new Api();
+        $parametros = array();
+        foreach($_GET as $nombre_variable => $valor_variable){
+            array_push($parametros,array(
+                    "parametro" => $nombre_variable,
+                    "valor" => $valor_variable
+
+              )
+            );
+
+        }//print_r($parametros);
+        header("Content-Type: application/json");
+        echo  $dato->ApiMultiParametro($_GET['url'],$parametros);
     }
 } 
 

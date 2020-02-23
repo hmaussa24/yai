@@ -50,11 +50,22 @@ $texto = <<<_END
                 public  function ApiParametro(\$parametro,\$valor){
                     \$datos = $namemoel::where(\$parametro,'=', \$valor)->first();
                     return json_encode(array('datos' => \$datos), JSON_PRETTY_PRINT);
-                }            
+                }
+                public function ApiMultiParametro(\$tabla, \$datos = array()){
+                    \$parn = [];
+                     for(\$i=1;\$i<count(\$datos);\$i++){
+                         
+                         \$tamp = [\$datos[\$i]['parametro'],"=",\$datos[\$i]['valor']];
+                         array_push(\$parn, \$tamp);
+             
+                     }
+                     \$datos = $namemoel::where(\$parn)->get();
+                     return json_encode(array('datos' => \$datos), JSON_PRETTY_PRINT);
+                }          
              }
              EOT;
     if(fwrite($fh, $texto)){
-        $output->writeln('Se creo el controlador ' . $input->getArgument('name').' en app/Controller');
+        $output->writeln('Se creo el controlador ' . $input->getArgument('name').' en app/Class');
     }
  }     
  fclose($fh);       
