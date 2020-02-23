@@ -7,5 +7,9 @@ require 'app/Database/DataBase.php';
    public function Api(){            
        $datos = User::get();
        return json_encode(array('datos' => $datos), JSON_PRETTY_PRINT);
+   }
+   public  function ApiParametro($parametro,$valor){
+       $datos = User::where($parametro,'=', $valor)->first();
+       return json_encode(array('datos' => $datos), JSON_PRETTY_PRINT);
    }            
 }
