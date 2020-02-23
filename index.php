@@ -1,12 +1,6 @@
 <?php
-/*
-foreach($_GET as $nombre_variable => $valor_variable){
-
-    echo $nombre_variable."=".$valor_variable."</br>";
-    
-} */
-require_once('app/Class/'.$_GET['url'].'.php');
 if(isset($_GET['url'])){
+    require_once('app/Class/'.$_GET['url'].'.php');
     if(count($_GET) == 1){
         $dato=new Api();
        header("Content-Type: application/json");
@@ -40,6 +34,8 @@ if(isset($_GET['url'])){
         header("Content-Type: application/json");
         echo  $dato->ApiMultiParametro($_GET['url'],$parametros);
     }
+}else{
+    echo "metadata";
 } 
 
 /*
